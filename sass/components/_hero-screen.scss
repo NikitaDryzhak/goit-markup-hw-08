@@ -2,7 +2,8 @@
   background: $secondary-background-color;
   margin-right: auto;
   margin-left: auto;
-  width: 480px;
+  width: 100%;
+  max-width: 1600px;
   height: 400px;
 
   background-image: linear-gradient(
@@ -10,10 +11,36 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/heroscr-phone.jpg");
+    url("../images/mobile/imghero.jpg");
+
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-resolution: 2dppx) {
+  .hero-screen {
+    background-image: url("../images/mobile/imghero@2x.jpg");
+  }
+}
+
+@media (min-width: 481px) {
+  .hero-screen {
+    background-image: url("../images/tablet/imghero.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../images/tablet/imghero@2x.jpg");
+  }
+}
+@media (min-width: 769px) {
+  .hero-screen {
+    background-image: url("../images/desktop/imghero.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../images/desktop/imghero@2x.jpg");
+  }
+}
+
 .hero-screen__title {
   color: $background-color;
   font-size: 26px;

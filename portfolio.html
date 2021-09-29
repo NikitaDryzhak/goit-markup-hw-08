@@ -17,27 +17,55 @@
     <div class="container header__container">
         <nav class="header__nav">
             <a href="index.html" class="header__logo"><span class="logo--second-color">Web</span>Studio</a>
-            <!-- <ul class="header__list">
-                <li class="header__nav-item"><a href="./index.html" class="header__link">Студия</a></li>
-                <li class="header__nav-item"><a href="./portfolio.html" class="header__link-active">Портфолио</a></li>
-                <li class="header__nav-item"><a href="" class="header__link">Контакты</a></li>
-            </ul> -->
+
+            <button type="button" class="header__btn is-open" data-menu-button>
+                <svg width="19" height="19" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./images/menu-mob.svg#menu-mob"></use>
+                </svg>
+            </button>
+            <div class="header__nav-menu" id="header__nav-menu" data-menu>
+                <button type="button" class="header__btn-cross is-open" data-menu-close>
+                    <svg width="19" height="19" aria-label="Переключатель мобильного меню">
+                        <use class="icon-cross" href="./images/menu-mob.svg#close-icon"></use>
+
+                    </svg>
+                </button>
+                <div class="header__navigation">
+                    <ul class="header__list">
+                        <li class="header__nav-item"><a href="./index.html" class="header__link">Студия</a></li>
+                        <li class="header__nav-item"><a href="./portfolio.html" class="header__link-active">Портфолио</a></li>
+                        <li class="header__nav-item"><a href="" class="header__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__contacts">
+                    <ul class="header__contacts-list">
+                        <li class="header__item">
+                            <a href="tel:+380991111111" class="header__contact-phone">
+                            <svg class="header__phone">
+                                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 099 111 11 11</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="mailto:info@devstudio.com" class="header__contact-mail">
+                                    <svg class="header__mail">
+                                        <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                                    </svg>
+                                    info@devstudio.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__social">
+                    <ul class="header__social-list">
+                        <li class="header__social-items"><a class="header__social-item" href="">Instagram</a></li>
+                        <li class="header__social-items"><a class="header__social-item" href="">Twitter</a></li>
+                        <li class="header__social-items"><a class="header__social-item" href="">Facebook</a></li>
+                        <li class="header__social-items"><a class="header__social-item" href="">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <ul class="header__contacts">
 
-            <li class="header__item">
-                <a href="mailto:info@devstudio.com" class="header__contact"><svg class="header__mail">
-                        <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                    </svg>info@devstudio.com</a>
-            </li>
-
-            <li class="header__item">
-                <a href="tel:+380991111111" class="header__contact">
-                    <svg class="header__phone">
-                        <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                    </svg>+38 099 111 11 11</a>
-            </li>
-        </ul>
 
     </div>
 </header>
@@ -236,5 +264,6 @@
             </div>
         </div>
     </footer>
+    <script defer src="js/menu.js"></script>
 </body>
 </html>
