@@ -27,6 +27,9 @@
     margin-left: -30px;
   }
 }
+.portfolio__img {
+  width: 100%;
+}
 
 .portfolio__card-item {
   cursor: pointer;
@@ -64,12 +67,6 @@
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
-}
-
-.portfolio__image {
-  display: block;
-
-  width: 100%;
 }
 
 .portfolio__card-img {
