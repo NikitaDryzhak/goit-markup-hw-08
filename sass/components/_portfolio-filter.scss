@@ -11,6 +11,9 @@
     margin-bottom: -15px;
     margin-bottom: 30px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   &-item:not(:last-child) {
     margin-right: 8px;

@@ -12,7 +12,7 @@ body {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .clients {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -256,7 +256,7 @@ body {
   width: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -746,6 +746,17 @@ body {
 .header__nav-menu.is-open {
   display: block;
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -813,16 +824,6 @@ body {
     color: #757575;
     text-decoration: none;
   }
-  .header__contacts:hover, .header__contacts:focus,
-  .header__contacts:hover .header__mail,
-  .header__contacts:hover .header__phone,
-  .header__contacts:focus .header__mail,
-  .header__contacts:focus .header__phone {
-    color: #2196f3;
-    fill: #2196f3;
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -881,6 +882,17 @@ body {
           align-items: center;
 }
 
+.header__contact-phone:hover, .header__contact-phone:focus,
+.header__contact-phone:hover .header__mail,
+.header__contact-phone:hover .header__phone,
+.header__contact-phone:focus .header__mail,
+.header__contact-phone:focus .header__phone {
+  color: #2196f3;
+  fill: #2196f3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @media screen and (max-width: 767px) {
   .header__contact-phone {
     color: #2196f3;
@@ -899,17 +911,35 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header__contact-phone {
+    font-size: 14px;
+  }
+}
+
 .header__contact-mail {
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 12px;
   color: #757575;
   font-size: 24px;
+}
+
+.header__contact-mail:hover, .header__contact-mail:focus,
+.header__contact-mail:hover .header__mail,
+.header__contact-mail:hover .header__phone,
+.header__contact-mail:focus .header__mail,
+.header__contact-mail:focus .header__phone {
+  color: #2196f3;
+  fill: #2196f3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -926,6 +956,7 @@ body {
   .header__contact-mail {
     margin-bottom: 0;
     margin-right: 30px;
+    font-size: 14px;
   }
 }
 
@@ -1023,12 +1054,6 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .header__navigation {
-    margin-bottom: 302px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .header__nav-item:not(:last-child) {
     margin-right: 50px;
@@ -1096,27 +1121,31 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero-screen {
-    background-image: url("../images/mobile/imghero@2x.jpg");
+    background-image: url("../images/mobile/imghero@2x.jpg"), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+    background-image: url("../images/mobile/imghero@2x.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 
 @media (min-width: 481px) {
   .hero-screen {
     background-size: cover;
-    background-image: url("../images/tablet/imghero.jpg");
+    background-image: url("../images/tablet/imghero.jpg"), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+    background-image: url("../images/tablet/imghero.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 
 @media (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 481px) and (min-resolution: 2dppx) {
   .hero-screen {
-    background-image: url("../images/tablet/imghero@2x.jpg");
+    background-image: url("../images/tablet/imghero@2x.jpg"), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+    background-image: url("../images/tablet/imghero@2x.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 
 @media (min-width: 769px) {
   .hero-screen {
     background-size: cover;
-    background-image: url("../images/desktop/imghero.jpg");
+    background-image: url("../images/desktop/imghero.jpg"), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+    background-image: url("../images/desktop/imghero.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 
@@ -1128,7 +1157,8 @@ body {
 
 @media (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 769px) and (min-resolution: 2dppx) {
   .hero-screen {
-    background-image: url("../images/desktop/imghero@2x.jpg");
+    background-image: url("../images/desktop/imghero@2x.jpg"), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+    background-image: url("../images/desktop/imghero@2x.jpg"), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 
@@ -1155,6 +1185,7 @@ body {
   .hero-screen__title {
     padding-top: 200px;
     font-size: 44px;
+    line-height: 60px;
   }
 }
 
@@ -1475,6 +1506,12 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio__filter {
+    margin-bottom: 50px;
+  }
+}
+
 .portfolio__filter-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1706,6 +1743,13 @@ textarea {
   margin-right: auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .tasks__title {
   font-weight: bold;
   font-size: 36px;
@@ -1716,7 +1760,6 @@ textarea {
 }
 
 .tasks {
-  padding-top: 94px;
   padding-bottom: 94px;
 }
 

@@ -71,6 +71,10 @@
   &.is-open {
     display: block;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
   @media screen and (max-width: 767px) {
     top: 0;
@@ -116,18 +120,6 @@
     text-align: left;
     color: $secondary-text-color;
     text-decoration: none;
-
-    &:hover,
-    &:focus,
-    &:hover .header__mail,
-    &:hover .header__phone,
-    &:focus .header__mail,
-    &:focus .header__phone {
-      color: $accent-color;
-      fill: $accent-color;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
   }
 }
 
@@ -159,6 +151,17 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  &:hover,
+  &:focus,
+  &:hover .header__mail,
+  &:hover .header__phone,
+  &:focus .header__mail,
+  &:focus .header__phone {
+    color: $accent-color;
+    fill: $accent-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   @media screen and (max-width: 767px) {
     color: $accent-color;
     font-size: 34px;
@@ -171,17 +174,32 @@
     color: $secondary-text-color;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .header__contact-mail {
   text-decoration: none;
   display: flex;
-
+  font-size: 12px;
   align-items: center;
   margin-bottom: 12px;
 
   color: $secondary-text-color;
   font-size: 24px;
+
+  &:hover,
+  &:focus,
+  &:hover .header__mail,
+  &:hover .header__phone,
+  &:focus .header__mail,
+  &:focus .header__phone {
+    color: $accent-color;
+    fill: $accent-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   @media screen and (min-width: 768px) {
     font-size: 12px;
     cursor: pointer;
@@ -192,6 +210,7 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
     margin-right: 30px;
+    font-size: 14px;
   }
 }
 
@@ -269,11 +288,11 @@
     font-size: 14px;
   }
 }
-.header__navigation {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
-  }
-}
+// .header__navigation {
+//   @media screen and (max-width: 767px) {
+//     margin-bottom: 302px;
+//   }
+// }
 
 .header__nav-item {
   @media screen and (min-width: 768px) {
