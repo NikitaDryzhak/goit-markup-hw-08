@@ -34,7 +34,8 @@
 .clients__item {
   margin-left: 30px;
   margin-bottom: 30px;
-  @media screen and (min-width: 480px) {
+
+  @media screen and (min-width: 320px) {
     flex-basis: calc(100% / 2 - 30px);
   }
 
@@ -48,6 +49,7 @@
 .clients__link {
   border: solid 1px #afb1b8;
   border-radius: 4px;
+  height: 92px;
   padding: 0;
   /* background-color: #fff; */
 
